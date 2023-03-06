@@ -1,7 +1,14 @@
+using APS.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Add EF Core
+builder.Services.AddDbContext<APSContext>(
+    options => options.UseSqlServer(Environment.GetEnvironmentVariable("APS_DB_CONTEXT")));
 
 var app = builder.Build();
 
@@ -9,7 +16,8 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // The default HSTS value is 30 days.
+    // You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

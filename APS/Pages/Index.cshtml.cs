@@ -1,20 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using APS.Context;
+using APS.Models;
+using APS.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace APS.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        APSContext _context;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexViewModel ViewModel;
+
+        public IndexModel(APSContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
-
+            ViewModel = new IndexViewModel
+            {
+                Vendor = _context.Vendors.FirstOrDefault()
+            };
+            
+            return Page();
         }
     }
 }
