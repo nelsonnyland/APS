@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Google App Service Routing
+//var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+//var url = $"http://0.0.0.0:{port}";
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -30,4 +34,5 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+//app.Run(url);
 app.Run();
