@@ -8,21 +8,21 @@ namespace APS.Pages
 {
     public class IndexModel : PageModel
     {
-        APSContext _context;
+        //APSContext _context;
 
-        public IndexViewModel ViewModel;
+        //public IndexViewModel ViewModel;
 
         public IndexModel(APSContext context)
         {
-            _context = context;
+            //_context = context;
         }
 
         public IActionResult OnGet()
         {
-            ViewModel = new IndexViewModel
-            {
-                Vendor = _context.Vendors.FirstOrDefault()
-            };
+            //ViewModel = new IndexViewModel
+            //{
+            //    Vendor = _context.Vendors.FirstOrDefault()
+            //};
             
             return Page();
         }
