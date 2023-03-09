@@ -1,7 +1,7 @@
 # APS
 APS (Auto Parts Store) is a TCSS 445 project to demonstrate the APS database.
 
-![APS Image](APS/APS/wwwroot/images/aps.png)
+![APS Image](APS/wwwroot/images/aps.png)
 
 ## DB Dogs
 * Nelson Nyland - nylandn@uw.edu
