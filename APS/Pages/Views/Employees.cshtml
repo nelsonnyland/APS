@@ -1,0 +1,78 @@
+﻿@page
+@model APS.Pages.Views.EmployeesModel
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h1>Employees</h1>
+
+@*<p>
+    <a asp-page="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].LocID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].EmpFName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].EmpLName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].EmpPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].EmpStreet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].EmpCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].EmpState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee[0].EmpCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Employee) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpFName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpLName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCode)
+            </td>
+            @*<td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
