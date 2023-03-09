@@ -1,5 +1,5 @@
 # APS
-APS (Auto Parts Store) is a project to demonstrate the APS database.
+APS (Auto Parts Store) is a TCSS 445 project to demonstrate the APS database.
 
 ![APS Image](APS/APS/wwwroot/images/aps.png)
 
