@@ -1,0 +1,60 @@
+﻿@page
+@model APS.Pages.Views.LocationsModel
+
+@{
+    ViewData["Title"] = "Locations";
+}
+
+<h1>Locations</h1>
+
+@*<p>
+    <a asp-page="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].LocName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].LocStreet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].LocCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].LocState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].LocCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Locations) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocCode)
+            </td>
+            @*<td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>

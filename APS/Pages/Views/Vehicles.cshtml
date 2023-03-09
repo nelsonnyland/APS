@@ -1,0 +1,60 @@
+﻿@page
+@model APS.Pages.Views.VehiclesModel
+
+@{
+    ViewData["Title"] = "Vehicles";
+}
+
+<h1>Vehicles</h1>
+
+@*<p>
+    <a asp-page="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicles[0].VendorID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicles[0].VehMake)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicles[0].VehModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicles[0].VehYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicles[0].VehEngine)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Vehicles) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehMake)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehEngine)
+            </td>
+            @*<td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
