@@ -13,9 +13,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Invoices[0].VendorID)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Invoices[0].InvoiceDesc)
             </th>
@@ -31,9 +31,9 @@
     <tbody>
 @foreach (var item in Model.Invoices) {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.VendorID)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.InvoiceDesc)
             </td>
