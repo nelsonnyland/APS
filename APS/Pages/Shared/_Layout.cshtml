@@ -20,29 +20,39 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Parts">Parts</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tables
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Parts">Parts</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Vehicles">Vehicles</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Stock">Stock</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Merchandise">Merchandise</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Vendors">Vendors</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Invoices">Invoices</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Locations">Locations</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-page="/Views/Employees">Employees</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Vehicles">Vehicles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Stock">Stock</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Merchandise">Merchandise</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Vendors">Vendors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Invoices">Invoices</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Locations">Locations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Employees">Employees</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Views/Search">Search</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +67,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - APS - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            University of Washington Tacoma - TCSS 445 - 2023
         </div>
     </footer>
 
